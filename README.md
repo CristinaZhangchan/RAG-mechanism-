@@ -25,12 +25,20 @@ Before starting, ensure you have the following installed:
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ Environment Configuration
 
-### 1. Clone & Setup
+1.  **Create an Environment File**: In the project root directory, create a file named `.env`.
+2.  **Add your API Key**: Insert the following content into the `.env` file:
+    ```text
+    GEMINI_API_KEY=xxx
+    ```
+    *Replace `xxx` with your actual Google Gemini API key. You can apply for a key at [Google AI Studio](https://aistudio.google.com/apikey).*
+
+---
+
+## 📦 Installation
+
+Use `uv` to install the necessary Python dependencies. This stack is optimized for vector search and generative AI:
+
 ```bash
-# Create project directory
-mkdir my-rag-project && cd my-rag-project
-
-# Initialize uv environment
-uv init
+uv add sentence_transformers chromadb google-genai python-dotenv
